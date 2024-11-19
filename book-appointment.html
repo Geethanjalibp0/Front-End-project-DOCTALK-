@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | DocTalk</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h1>DocTalk</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Book Appointment Section -->
+    <section class="appointment-section">
+        <h2>Book Appointment</h2>
+
+        <form id="appointment-form">
+            <!-- Doctor Details (Autofilled) -->
+            <div class="form-group">
+                <label for="doctor-name">Doctor Name:</label>
+                <input type="text" id="doctor-name" name="doctor-name" readonly>
+            </div>
+
+            <!-- Patient Details -->
+            <div class="form-group">
+                <label for="patient-name">Your Name:</label>
+                <input type="text" id="patient-name" name="patient-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="patient-email">Email:</label>
+                <input type="email" id="patient-email" name="patient-email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="appointment-date">Appointment Date:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+            </div>
+
+            <!-- Replace Duration with Preferred Appointment Time Slot -->
+            <div class="form-group">
+                <label for="appointment-time-slot">Preferred Appointment Time Slot:</label>
+                <select id="appointment-time-slot" name="appointment-time-slot" required>
+                    <option value="9am - 10am">9am - 10am</option>
+                    <option value="10am - 11am">10am - 11am</option>
+                    <option value="11am - 12pm">11am - 12pm</option>
+                    <option value="1pm - 2pm">1pm - 2pm</option>
+                    <option value="2pm - 3pm">2pm - 3pm</option>
+                    <option value="3pm - 4pm">3pm - 4pm</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="symptoms">Symptoms/Reason for Appointment:</label>
+                <textarea id="symptoms" name="symptoms" rows="4" placeholder="Describe your symptoms..." required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Appointment Request</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 DocTalk. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to Autofill Doctor's Name, Handle Form Submission, and Download Appointment as PDF -->
+    <script>
+        // Function to get query parameter from URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Autofill the doctor's name based on the URL parameter
+        window.onload = function() {
+            const doctorNameField = document.getElementById("doctor-name");
+            const doctorName = getQueryParam("doctor");
+            if (doctorName) {
+                doctorNameField.value = doctorName.replace('%20', ' ');
+            }
+        };
+
+        // Form submission and pop-up alert
+        const form = document.getElementById('appointment-form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Get form values
+            const doctorName = document.getElementById("doctor-name").value;
+            const patientName = document.getElementById("patient-name").value;
+            const patientEmail = document.getElementById("patient-email").value;
+            const appointmentDate = document.getElementById("appointment-date").value;
+            const appointmentTimeSlot = document.getElementById("appointment-time-slot").value;
+            const symptoms = document.getElementById("symptoms").value;
+
+            // Display the pop-up message
+            alert('Your appointment request has been submitted successfully!');
+
+            // Generate PDF of appointment details
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            doc.text("Appointment Details", 10, 10);
+            doc.text(`Doctor: ${doctorName}`, 10, 20);
+            doc.text(`Patient Name: ${patientName}`, 10, 30);
+            doc.text(`Email: ${patientEmail}`, 10, 40);
+            doc.text(`Date: ${appointmentDate}`, 10, 50);
+            doc.text(`Preferred Time Slot: ${appointmentTimeSlot}`, 10, 60);
+            doc.text(`Symptoms: ${symptoms}`, 10, 70);
+
+            // Save the PDF with a generated name
+            doc.save("appointment-details.pdf");
+
+            // Clear the form after submission
+            form.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,542 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Flexbox fix for footer */
+html, body {
+    height: 100%;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+h1, h2, h3 {
+    margin-bottom: 10px;
+    color: #2C3E50;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #2C3E50; /* Darker blue for the header */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style-type: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section with Blue-White Gradient */
+.hero {
+    background: linear-gradient(135deg, #5DADE2, #D4E6F1, #FFFFFF); /* Blue to white gradient */
+    color: #2C3E50; /* Darker blue text for contrast */
+    padding: 80px 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: #2C3E50;
+}
+
+.hero-content p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    color: #2C3E50;
+}
+
+.cta-button {
+    background-color: #1B4F72; /* Darker blue for the call-to-action button */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #154360; /* Slightly darker on hover */
+}
+
+/* How It Works Section with White Background */
+.how-it-works {
+    padding: 40px 20px;
+    background-color: #FFFFFF; /* Clean white background */
+    text-align: center;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    margin: 20px;
+    width: 30%;
+    color: #2C3E50; /* Dark blue for text */
+}
+
+/* Featured Doctors Section with Light Blue */
+.featured-doctors {
+    padding: 40px 20px;
+    background-color: #EAF2F8; /* Light blue background */
+    text-align: center;
+}
+
+.doctor-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.doctor-card {
+    width: 30%;
+    padding: 10px;
+    background-color: #FFFFFF; /* White card background */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    color: #2C3E50; /* Darker blue for text */
+}
+
+.doctor-card img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* Specializations Overview Section with Background Image */
+.specializations-overview {
+    position: relative;
+    padding: 40px 20px;
+    background-image: url('C:/Users/GEETHANJALI/Desktop/DOCTALK/images/markus-frieauff-IJ0KiXl4uys-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:  #2C3E50;
+    text-align: center;
+}
+
+.specializations-overview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1;
+}
+.specializations-overview ul, .specializations-overview li {
+    position: relative;
+    z-index: 2; /* Ensure text appears on top of the overlay */
+    list-style-type: none;
+}
+
+.specializations-overview li {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+/* 
+.specializations {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+} */
+
+/* .specializations h2 {
+    margin-bottom: 20px;
+} */
+
+/* .specialization-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+} */
+
+/* .specialization-item {
+    background-color: #D6EAF8;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+/* .specialization-item h3 a {
+    color: #3498DB; 
+    text-decoration: none;
+}
+
+.specialization-item h3 a:hover {
+    text-decoration: underline;
+} */
+
+/* Testimonials Section with Light Blue */
+.testimonials {
+    padding: 40px 20px;
+    background-color: #EAF2F8; /* Light blue background */
+    text-align: center;
+}
+.testimonial {
+    margin-bottom: 20px;
+}
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #3498DB; /* Medium blue */
+}
+/* Footer */
+footer {
+    background-color: #2C3E50; /* Darker blue footer */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+}
+footer p {
+    margin: 0;
+}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .doctor-card {
+        width: 45%;
+    }
+
+    .filters, .sorting {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .doctor-card {
+        width: 100%;
+    }
+}
+
+/* Main Doctors Section */
+.doctors-section {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.search-filter {
+    margin-bottom: 30px;
+}
+
+#search-bar {
+    padding: 10px;
+    width: 60%;
+    font-size: 1rem;
+    border: 2px solid #3498DB;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.filters select {
+    padding: 10px;
+    margin: 10px;
+    font-size: 1rem;
+    border: 1px solid #3498DB;
+    border-radius: 5px;
+}
+
+/* Doctor Cards */
+.doctor-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.doctor-card {
+    width: 30%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.doctor-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.doctor-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.contact-button {
+    background-color: #3498DB;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background-color: #2980B9;
+}
+
+/* Footer */
+footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .doctor-card {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .doctor-card {
+        width: 100%;
+    }
+
+    #search-bar {
+        width: 90%;
+    }
+}
+/* Main Doctors Section */
+.doctors-section {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.search-filter {
+    margin-bottom: 30px;
+}
+
+#search-bar {
+    padding: 10px;
+    width: 60%;
+    font-size: 1rem;
+    border: 2px solid #3498DB;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.filters select {
+    padding: 10px;
+    margin: 10px;
+    font-size: 1rem;
+    border: 1px solid #3498DB;
+    border-radius: 5px;
+}
+
+/* Doctor Cards */
+.doctor-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.doctor-card {
+    width: 30%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.doctor-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.doctor-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+/* Updated Styling for Appointment Section (Wider form) */
+.appointment-section {
+    max-width: 800px; /* Increased width from 600px to 800px */
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-section h2 {
+    text-align: center;
+    color: #005f99;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+button[type="submit"] {
+    background-color: #005f99;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #0077cc;
+}
+
+/* Contact Section */
+.contact {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #2E86C1;
+}
+/* 404 Error Section */
+.error-404 {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.error-404 h2 {
+    color: #E74C3C; /* Red color for error message */
+    margin-bottom: 20px;
+}
+
+.error-404 p {
+    margin-bottom: 20px;
+}
+
+.error-404 .home-link {
+    background-color: #3498DB;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.error-404 .home-link:hover {
+    background-color: #2E86C1;
+}
+
+
+

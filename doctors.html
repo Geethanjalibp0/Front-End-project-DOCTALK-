@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors Listing | DocTalk</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h1>DocTalk</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="doctors-section">
+        <h2>Our Doctors</h2>
+
+        <!-- Search and Filter Section -->
+        <div class="search-filter">
+            <input type="text" id="search-bar" placeholder="Search doctors by name or specialization...">
+
+            <div class="filters">
+                <label for="specialization-filter">Specialization:</label>
+                <select id="specialization-filter">
+                    <option value="all">All Specializations</option>
+                    <option value="Cardiology">Cardiology</option>
+                    <option value="Neurology">Neurology</option>
+                    <option value="Pediatrics">Pediatrics</option>
+                    <option value="Dermatology">Dermatology</option>
+                </select>
+
+                <label for="location-filter">Location:</label>
+                <select id="location-filter">
+                    <option value="all">All Locations</option>
+                    <option value="City 1">Banglore</option>
+                    <option value="City 2">Manglore</option>
+                    <option value="City 3">Udupi</option>
+                    <option value="City 4">Chikkamagaluru</option>
+                    <option value="City 5">Davangere</option>
+                    <option value="City 6">Shimoga</option>
+                    
+                </select>
+
+                <label for="availability-filter">Availability:</label>
+                <select id="availability-filter">
+                    <option value="all">All Days</option>
+                    <option value="Today">Today</option>
+                    <option value="Tomorrow">Tomorrow</option>
+                    <option value="Week">This Week</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Doctor Profile Cards -->
+        <div class="doctor-cards">
+            <!-- Doctor 1 -->
+            <div class="doctor-card" data-specialization="Cardiology" data-location="Banglore" data-availability="Today">
+                <img src="C:\Users\GEETHANJALI\Desktop\DOCTALK\images\docm1.jpg" alt="Dr. John Doe">
+                <h3>Dr. John Doe</h3>
+                <p><strong>Specialization:</strong> Cardiology</p>
+                <p><strong>Experience:</strong> 10 years</p>
+                <p><strong>Location:</strong> Banglore</p>
+                <p><strong>Rating:</strong> ★★★★☆</p>
+                <a href="book-appointment.html?doctor=John%20Doe" class="contact-button">Book Appointment</a>
+            </div>
+
+            <!-- Doctor 2 -->
+            <div class="doctor-card" data-specialization="Dermatology" data-location="Shimoga" data-availability="tomorrow">
+                <img src="C:\Users\GEETHANJALI\Desktop\DOCTALK\images\doc1.jpg" alt="Dr. Jane Smith">
+                <h3>Dr. Jane Smith</h3>
+                <p><strong>Specialization:</strong> Dermatology</p>
+                <p><strong>Experience:</strong> 8 years</p>
+                <p><strong>Location:</strong>Shimoga</p>
+                <p><strong>Rating:</strong> ★★★★☆</p>
+                <a href="book-appointment.html?doctor=Jane%20Smith" class="contact-button">Book Appointment</a>
+            </div>
+
+            <!-- Doctor 3 -->
+            <div class="doctor-card" data-specialization="Pediatrics" data-location="Manglore" data-availability="Today">
+                <img src="C:\Users\GEETHANJALI\Desktop\DOCTALK\images\docm2.jpg" alt="Dr. Mark Wilson">
+                <h3>Dr. Mark Wilson</h3>
+                <p><strong>Specialization:</strong> Pediatrics</p>
+                <p><strong>Experience:</strong> 12 years</p>
+                <p><strong>Location:</strong> Manglore</p>
+                <p><strong>Rating:</strong> ★★★★☆</p>
+                <a href="book-appointment.html?doctor=Mark%20Wilson" class="contact-button">Book Appointment</a>
+            </div>
+ <!-- Doctor 4-->
+ <div class="doctor-card" data-specialization="Cardiology" data-location="Banglore" data-availability="Tomorrow">
+    <img src="C:\Users\GEETHANJALI\Desktop\DOCTALK\images\download (1).jpg" alt="Dr. John Smith">
+    <h3>Dr. John Smith</h3>
+    <p><strong>Specialization:</strong> Cardiology</p>
+    <p><strong>Experience:</strong> 8 years</p>
+    <p><strong>Location:</strong>Banglore</p>
+    <p><strong>Rating:</strong> ★★★★☆</p>
+    <a href="book-appointment.html?doctor=John%20Smith" class="contact-button">Book Appointment</a>
+</div>
+
+<!-- Doctor 5 -->
+<div class="doctor-card" data-specialization="Dermatology" data-location="Udupi" data-availability="Week">
+    <img src="C:\Users\GEETHANJALI\Desktop\DOCTALK\images\images.jpg" alt="Dr. Sara Johnson">
+    <h3>Dr. Sara Johnson</h3>
+    <p><strong>Specialization:</strong> Dermatology</p>
+    <p><strong>Experience:</strong> 18 years</p>
+    <p><strong>Location:</strong> Udupi</p>
+    <p><strong>Rating:</strong> ★★★★☆</p>
+    <a href="book-appointment.html?doctor=Sara%20Johnson" class="contact-button">Book Appointment</a>
+</div>
+
+<!-- Doctor 6 -->
+<div class="doctor-card" data-specialization="Pediatrics" data-location="Manglore" data-availability="Today">
+    <img src="C:\Users\GEETHANJALI\Desktop\DOCTALK\images\images (1).jpg" alt="Dr. Mike Davis">
+    <h3>Dr. Mike Davis</h3>
+    <p><strong>Specialization:</strong> Pediatrics</p>
+    <p><strong>Experience:</strong> 15 years</p>
+    <p><strong>Location:</strong> Manglore</p>
+    <p><strong>Rating:</strong> ★★★★☆</p>
+    <a href="book-appointment.html?doctor=Mike%20Davis" class="contact-button">Book Appointment</a>
+</div>
+ <!-- Doctor 7 -->
+ <div class="doctor-card" data-specialization="Neurology" data-location="Shimoga" data-availability="Today">
+    <img src="C:\Users\GEETHANJALI\Desktop\DOCTALK\images\doc2.jpg" alt="Dr. Riya">
+    <h3>Dr. Riya</h3>
+    <p><strong>Specialization:</strong> Neurology</p>
+    <p><strong>Experience:</strong> 5 years</p>
+    <p><strong>Location:</strong> Shimoga</p>
+    <p><strong>Rating:</strong> ★★★★☆</p>
+    <a href="book-appointment.html?doctor=Riya%20" class="contact-button">Book Appointment</a>
+</div>
+
+<!-- Doctor 8 -->
+<div class="doctor-card" data-specialization="Dermatology" data-location="Chikkamagaluru" data-availability="Week">
+    <img src="C:\Users\GEETHANJALI\Desktop\DOCTALK\images\docm3.jpg" alt="Dr. Martin">
+    <h3>Dr. Martin</h3>
+    <p><strong>Specialization:</strong> Dermatology</p>
+    <p><strong>Experience:</strong> 7 years</p>
+    <p><strong>Location:</strong> Chikkamagaluru</p>
+    <p><strong>Rating:</strong> ★★★★☆</p>
+    <a href="book-appointment.html?doctor=Martin%20" class="contact-button">Book Appointment</a>
+</div>
+
+<!-- Doctor 9 -->
+<div class="doctor-card" data-specialization="Neurology" data-location="Davangere" data-availability="Today">
+    <img src="C:\Users\GEETHANJALI\Desktop\DOCTALK\images\docf3.jpg" alt="Dr. Jyothi krishna">
+    <h3>Dr. Jyothi Krishna</h3>
+    <p><strong>Specialization:</strong> Neurology</p>
+    <p><strong>Experience:</strong> 9 years</p>
+    <p><strong>Location:</strong> Davangere</p>
+    <p><strong>Rating:</strong> ★★★★☆</p>
+    <a href="book-appointment.html?doctor=Jyothi%20Krishna" class="contact-button">Book Appointment</a>
+</div>
+ <!-- Doctor 10 -->
+ <div class="doctor-card" data-specialization="Cardiology" data-location="Manglore" data-availability="Today">
+    <img src="C:\Users\GEETHANJALI\Desktop\DOCTALK\images\docm4.jpg" alt="Dr. Pradeep">
+    <h3>Dr. Pradeep</h3>
+    <p><strong>Specialization:</strong> Cardiology</p>
+    <p><strong>Experience:</strong> 11 years</p>
+    <p><strong>Location:</strong> Manglore</p>
+    <p><strong>Rating:</strong> ★★★★☆</p>
+    <a href="book-appointment.html?doctor=Pradeep%20" class="contact-button">Book Appointment</a>
+</div>
+
+<!-- Doctor 11 -->
+<div class="doctor-card" data-specialization="Dermatology" data-location="Banglore" data-availability="Tomorrow">
+    <img src="C:\Users\GEETHANJALI\Desktop\DOCTALK\images\docm5.jpg" alt="Dr. Joshi Kamath">
+    <h3>Dr. Joshi Kamath</h3>
+    <p><strong>Specialization:</strong> Dermatology</p>
+    <p><strong>Experience:</strong>12 years</p>
+    <p><strong>Location:</strong> Banglore</p>
+    <p><strong>Rating:</strong> ★★★★☆</p>
+    <a href="book-appointment.html?doctor=Joshi%20Kamath" class="contact-button">Book Appointment</a>
+</div>
+
+<!-- Doctor 12 -->
+<div class="doctor-card" data-specialization="Pediatrics" data-location="Udupi" data-availability="Today">
+    <img src="C:\Users\GEETHANJALI\Desktop\DOCTALK\images\docf4.jpg" alt="Dr. Seeta ">
+    <h3>Dr. Seeta</h3>
+    <p><strong>Specialization:</strong> Pediatrics</p>
+    <p><strong>Experience:</strong> 8 years</p>
+    <p><strong>Location:</strong> Udupi</p>
+    <p><strong>Rating:</strong> ★★★★☆</p>
+    <a href="book-appointment.html?doctor=Seeta%20" class="contact-button">Book Appointment</a>
+</div>
+ <!-- Doctor 13 -->
+ <div class="doctor-card" data-specialization="Neurology" data-location="Shimoga" data-availability="Today">
+    <img src="C:\Users\GEETHANJALI\Desktop\DOCTALK\images\docm6.jpg" alt="Dr. Anirudh">
+    <h3>Dr. Anirudh</h3>
+    <p><strong>Specialization:</strong> Neurology</p>
+    <p><strong>Experience:</strong> 14 years</p>
+    <p><strong>Location:</strong> Shimoga</p>
+    <p><strong>Rating:</strong> ★★★★☆</p>
+    <a href="book-appointment.html?doctor=Anirudh%20" class="contact-button">Book Appointment</a>
+</div>
+
+<!-- Doctor 14 -->
+<div class="doctor-card" data-specialization="Dermatology" data-location="Chikkamagaluru" data-availability="Week">
+    <img src="C:\Users\GEETHANJALI\Desktop\DOCTALK\images\docf5.jpg" alt="Dr. Priya">
+    <h3>Dr. Priya</h3>
+    <p><strong>Specialization:</strong> Dermatology</p>
+    <p><strong>Experience:</strong> 5 years</p>
+    <p><strong>Location:</strong> Chikkamagaluru</p>
+    <p><strong>Rating:</strong> ★★★★☆</p>
+    <a href="book-appointment.html?doctor=Priya%20" class="contact-button">Book Appointment</a>
+</div>
+
+<!-- Doctor 15 -->
+<div class="doctor-card" data-specialization="Neurology" data-location="davangere" data-availability="Tomorrow">
+    <img src="C:\Users\GEETHANJALI\Desktop\DOCTALK\images\docm7.jpg" alt="Dr. Bipin">
+    <h3>Dr. Bipin</h3>
+    <p><strong>Specialization:</strong> Neurology</p>
+    <p><strong>Experience:</strong> 12 years</p>
+    <p><strong>Location:</strong> davangere</p>
+    <p><strong>Rating:</strong> ★★★★☆</p>
+    <a href="book-appointment.html?doctor=Bipin%20" class="contact-button">Book Appointment</a>
+</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 DocTalk. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Filters -->
+    <script>
+        // JavaScript to filter doctors based on search and filters
+        const searchBar = document.getElementById("search-bar");
+        const specializationFilter = document.getElementById("specialization-filter");
+        const locationFilter = document.getElementById("location-filter");
+        const availabilityFilter = document.getElementById("availability-filter");
+        const doctorCards = document.querySelectorAll(".doctor-card");
+
+        function filterDoctors() {
+            const searchValue = searchBar.value.toLowerCase();
+            const specializationValue = specializationFilter.value;
+            const locationValue = locationFilter.value;
+            const availabilityValue = availabilityFilter.value;
+
+            doctorCards.forEach(card => {
+                const doctorName = card.querySelector("h3").textContent.toLowerCase();
+                const doctorSpecialization = card.getAttribute("data-specialization");
+                const doctorLocation = card.getAttribute("data-location");
+                const doctorAvailability = card.getAttribute("data-availability");
+
+                // Check if the doctor matches the search and filter criteria
+                const matchesSearch = doctorName.includes(searchValue);
+                const matchesSpecialization = specializationValue === "all" || doctorSpecialization === specializationValue;
+                const matchesLocation = locationValue === "all" || doctorLocation === locationValue;
+                const matchesAvailability = availabilityValue === "all" || doctorAvailability === availabilityValue;
+
+                if (matchesSearch && matchesSpecialization && matchesLocation && matchesAvailability) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        // Add event listeners to search bar and filters
+        searchBar.addEventListener("input", filterDoctors);
+        specializationFilter.addEventListener("change", filterDoctors);
+        locationFilter.addEventListener("change", filterDoctors);
+        availabilityFilter.addEventListener("change", filterDoctors);
+    </script>
+</body>
+</html>
